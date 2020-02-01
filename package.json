@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-weather-app",
+  "version": "1.0.0",
+  "description": "An assyncronous Node.js Weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloPortugal/nodejs-weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloPortugal/nodejs-weather-app/issues"
+  },
+  "homepage": "https://github.com/PauloPortugal/nodejs-weather-app#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
