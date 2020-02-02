@@ -7,3 +7,4 @@ Weather forecast based on user's input location
 
 * Uses mapbox.com for forward geocoding
 * Uses darksky.net to return the weather forecast for a given town/place.
+* Users ECMAScript6 Object Property Shorthand and Destructuring
