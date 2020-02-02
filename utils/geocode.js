@@ -1,8 +1,9 @@
+const fs      = require('fs')
 const request = require('request')
 
 const geocode = (address, callback) => {
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) +
-        '.json?access_token=pk.eyJ1IjoicG1vbnRlaXJvIiwiYSI6ImNrNjN2eXZwMDA5dHczcG1wcDVzdTA3NWkifQ.o9qkby7FbRrlFDF1cOHrqg'
+        '.json?access_token=' + getToken()
     request.get({ url, json: true }, (error, {body}) => {
         if (error) {
             callback('Unable to connect to Mapbox API')
@@ -18,6 +19,14 @@ const geocode = (address, callback) => {
             })
         }
     })
+}
+
+const getToken = () => {
+    try {
+        return JSON.parse(fs.readFileSync('./config/tokens.json').toString()).mapbox
+    } catch (e) {
+        console.log('Please provide the "mapbox" access token')
+    }
 }
 
 module.exports = geocode
