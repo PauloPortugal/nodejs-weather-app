@@ -1,5 +1,5 @@
 # A Nodejs Weather App
-An event-driven assyncronous Node.js Weather app, to explore Node.js' assyncronous non-blocking single-threaded event-loop.
+An event-driven asynchronous Node.js Weather app, to explore Node.js' asynchronous non-blocking single-threaded event-loop.
 This is part of Andrew Mead's (mead.io) "The Complete Node.js Developer Course".
 
 ## Goal
