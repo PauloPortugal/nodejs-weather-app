@@ -11,7 +11,7 @@ Return a weather forecast based on user's input location
 
 ## Setup
 
- * Create a (free) account with [mapbox.com](mapbox.com) and [darksky.net](darksky.net) and copy the access tokens to `.config/tokens.json`
+ * Create a (free) account with [mapbox.com](mapbox.com) and [darksky.net](darksky.net) and provide the keys/tokens through an environment variable
  * Run `git update-index --assume-unchanged config/tokens.json` to avoid commiting the tokens to a remote repo
 
 
