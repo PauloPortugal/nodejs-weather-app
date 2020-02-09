@@ -20,5 +20,5 @@ Return a weather forecast based on user's input location
 Through the command line:
 
 ```
-node app.js "Lille"
+DARKSKY_TOKEN="your-darksky-token" MAPBOX_TOKEN="<your-mapbox-token>" node app.js "Lille"
 ```

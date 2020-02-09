@@ -1,9 +1,8 @@
-const fs          = require('fs')
 const request     = require('request')
 
 
 const forecast = (latitude, longitude, callback) => {
-    const url = 'https://api.darksky.net/forecast/' + getToken() + '/' + 
+    const url = 'https://api.darksky.net/forecast/' + process.env.DARKSKY_TOKEN + '/' + 
         encodeURIComponent(latitude) + ',' + encodeURIComponent(longitude) + '?units=si'
     request.get({ url, json: true }, (error, {body}) => {
         if (error) {
@@ -18,14 +17,5 @@ const forecast = (latitude, longitude, callback) => {
         }
     })
 }
-
-const getToken = () => {
-    try {
-        return JSON.parse(fs.readFileSync('./config/tokens.json').toString()).darksky
-    } catch (e) {
-        console.log('Please provide the "darksky" access token')
-    }
-}
-
 
 module.exports = forecast
